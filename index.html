@@ -5,11 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Michael Scramble Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: rgb(228, 214, 59); 
+            color: rgb(180, 174, 174); 
+        }
+
+        .gameArea {
+            text-align: center;
+            background: rgb(255, 255, 255); 
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Esto asegura que todo se alinee al centro */
+            justify-content: center; /* Centra el contenido verticalmente */
+            width: 80%;
+            max-width: 400px; /* Limita el tamaño máximo de la caja */
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        .word {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1.5rem;
+            text-align: center;
+            width: 80%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .score {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #007bff;
+       }
+
+        button {
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+    </style>
 </head>
 <body>
+    
     <div class = "gameArea"> 
-        
+        <h1>Scramble</h1>
+        <div class="word">Presiona "Iniciar" para jugar</div>
+        <input type="text" class="inputWord" placeholder="Escribe aquí">
+        <br>
+        <button class="btnStart">Iniciar Juego</button>
+        <button class="btnVerify" style="display: none;">Verificar</button>
+        <div class="message"></div>
     </div>
+    
     <script src = "scramble.js"></script>
 </body>
 </html>
